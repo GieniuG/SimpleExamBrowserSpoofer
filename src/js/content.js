@@ -1,4 +1,12 @@
 function main(){
+    const fakeUA =  "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/6.11.0 Chrome/140.0.0.0 Safari/537.36"
+    Object.defineProperty(navigator, "userAgent",{
+        get: function() {return fakeUA}
+    })
+    Object.defineProperty(navigator,"appVersion",{
+        get: function(){return fakeUA}
+    })
+
     let banner = document.createElement("div");
     banner.id="sebBanner"
 

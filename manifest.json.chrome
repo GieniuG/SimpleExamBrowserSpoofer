@@ -1,11 +1,24 @@
 {
     "manifest_version": 3,
-    "version":"1.0.0",
+    "version":"1.1.0",
     "name": "SimpleExamBrowserSpoofer",
-    "permissions": [
+        "permissions": [
         "activeTab",
-        "storage"
+        "storage",
+        "declarativeNetRequest"
     ],
+    "host_permissions": [
+        "*://delta.pk.edu.pl/*"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ua_spoof_rules",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
     "icons": {
         "64": "./icon.png"
     },
