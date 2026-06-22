@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "version":"1.0.0",
+    "name": "SimpleExamBrowserSpoofer",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "icons": {
+        "64": "./icon.png"
+    },
+    "web_accessible_resources": [
+    {
+      "resources": ["src/assets/home.svg","src/assets/close.svg","src/assets/reload.svg"],
+      "matches": ["*://delta.pk.edu.pl/*"]
+    }
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://delta.pk.edu.pl/*"
+            ],
+            "js": [
+                "./src/js/content.js"
+            ],
+            "css":[
+                "./src/css/content.css"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "./src/popup/popup.html"
+    },
+    "background": {
+        "service_worker": "./src/js/service-worker.js",
+        "type": "module"
+    }
+}
+

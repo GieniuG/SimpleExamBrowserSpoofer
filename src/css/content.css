@@ -1,0 +1,57 @@
+:root{
+    --height:58px;
+}
+body{
+    overflow: hidden;
+}
+#sebBanner{
+    position:fixed;
+    top:0;
+    z-index: 100000;
+    height: var(--height);
+    width:100%;
+    background-color: #1f2532;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color:#e4e6e9;
+}
+#page-wrapper.sebsOn {
+    position: relative;
+    top:var(--height);
+    overflow:auto;
+    & > nav {
+        top:var(--height) !important;
+    }
+}
+#sebBanner div{
+    display: flex;
+    align-items: center;
+    gap:26px;
+}
+#left{
+    padding-left: 19px;
+}
+#right{
+    padding-right: 19px;
+    justify-content: end;
+}
+.sebButton{
+    background: none;
+    border:none;
+    width: fit-content;
+    height: fit-content;
+}
+#bar{
+    width:300px;
+    height: 40px;
+    background-color: #888888;
+    border-radius: 9px;
+}
+#timer{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    gap:.1rem !important;
+    font-size: 10px;
+}

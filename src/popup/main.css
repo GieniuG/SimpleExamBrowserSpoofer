@@ -1,0 +1,14 @@
+body{
+    background-color: #232634;
+    color:#c6d0f5;
+}
+#switch {
+    display: none;
+}
+svg{
+    width: 100px;
+    cursor: pointer;
+}
+input:checked + svg path{
+    fill: #81c8be;
+}
